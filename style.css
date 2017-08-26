@@ -1,0 +1,151 @@
+/* CSS Table */
+/*#F5EDD9 #EAEBEB #FDFCFC*/
+
+	body,a,ul,li,.main,.floatsection,.rightsdeclare,.rightsdeclarearea,.titleversion,.input{
+	font-family: "Noto Sans";
+	color:#000000;
+	}
+	
+	a,a:hover,a:active{
+	text-decoration:none;
+	}
+
+	body{
+	background: #FDFCFC;
+	}
+
+	.main{
+	padding:20px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 40px;
+	text-align: center;
+	}
+	
+	.clicklink{
+	padding: 10px 10px;
+	border: none;
+	border-radius:5px;
+	transition:background 0.5s;
+	transition:color 0.5s;
+	transition:box-shadow 0.5s;
+	}
+	
+	.clicklink:hover{
+	padding: 10px 10px;
+	color:#FFFFFF;
+	background:#2BA31B;
+	box-shadow: 1px 1px 3px 0 rgba(0,0,0,0.5) ;
+	}
+	
+	.rapidrequest{
+	padding:5px 10px;
+	border: none;
+	border-radius:5px;
+	background:#99C4FF;
+	transition:font-size 0.5s;
+	}
+	
+	.rapidrequest:hover{
+	background:#CCE2FF;
+	font-size:150%;
+	}
+	
+	.hpvdb{
+	color:#2BA31B;
+	text-align:left;
+	margin-left:20px;
+	margin-top:20px;
+	}
+	
+	ul{
+	list-style-type:none;
+	}
+	
+	li{
+	display:inline;
+	margin: 10px;
+	}
+	
+	.floatsection{
+	top:0px;
+	left:0px;
+	right:0px;
+	position:fixed;
+	height:30%;
+	width:100%;
+	background:#FDFCFC;
+	opacity:1.0;
+	z-index:3;
+	}
+	
+	.rightsdeclare {
+	/*padding: 10px 5px;*/
+	font-weight: 400;
+	font-size:16px;
+	text-align: center;
+	/*text-shadow: 0.5px 0.5px 1px #000000;*/
+	color: #FFFFFF;
+	margin:0px auto;
+	/*margin-bottom:5px;*/
+	}
+	
+	.rightsdeclarearea{
+	padding: 5px 10px 10px 0px;
+	width:auto;
+	height:auto;
+	left:100%;
+	right:100%;
+	/*bottom: 0px;
+	position:fixed; */ /*浮動置底*/
+	border: none;
+	border-radius: 5px;
+	background: #2BA31B;
+	}
+	
+	.updatetime{
+	margin-top:20px;
+	margin-bottom:20px;
+	text-align: center;
+	}
+	
+	.titleversion{
+	font-size:14px;
+	padding: 2px 6px;
+	margin-left:10px;
+	color:#000000;
+	background:#BABABA;
+	border: none;
+	border-radius:5px;
+	box-shadow: 1px 1px 3px 0 rgba(0,0,0,0.5)
+	}
+
+	.input {
+	padding: 10px 10px;
+	font-size:28px;
+	color:#000000;
+	text-align:center;
+	background:#FFFFFF;
+	border: 1px solid #b7b7b7;
+	border-style:solid;
+	border-radius:5px;
+	border-width:1px;
+	box-sizing: content-box;
+	box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+	text-shadow:1px 1px 2px rgba(0,0,0,0.3);
+	} 
+		
+	.input[type="submit"] {
+	padding: 10px 30px;
+	font-size:28px;
+	color: #ffffff;
+	text-shadow: 1px 1px 2px #000000;
+	text-decoration: none;
+	text-align: center;
+	background: #2BA31B;
+	border-radius: 5px;
+	border: none;
+	box-sizing: content-box;
+	box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.3) ;
+	}
+
