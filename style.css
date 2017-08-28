@@ -1,61 +1,97 @@
 /* CSS Table */
 /*#F5EDD9 #EAEBEB #FDFCFC*/
 
-	body,a,ul,li,.main,.floatsection,.rightsdeclare,.rightsdeclarearea,.titleversion,.input{
+	body,ul,li,.main,.floatsection,.rightsdeclare,.rightsdeclarearea,.titleversion,.input{
 	font-family: "Noto Sans";
 	color:#000000;
 	}
 	
+	/*取消連結底線*/
 	a,a:hover,a:active{
 	text-decoration:none;
+	}
+	
+	img.imglink {
+    max-height: 3rem;
 	}
 
 	body{
 	background: #FDFCFC;
 	}
 
+	/*文字主色，標題、版權宣告、按鈕及搜尋結果區連結*/
+	.themeTextColor,.clicklink,a.resultlink:hover {
+	color: #2ba31b;
+	}
+
 	.main{
-	padding:20px;
 	font-weight: 400;
-	font-size: 18px;
-	line-height: 40px;
+	font-size: 1.1rem;
+	line-height: 2rem;
 	text-align: center;
 	}
 	
+	.resultHeader
+	{
+	color:#000000;
+	}
+	
 	.clicklink{
-	padding: 10px 10px;
+	padding:0.3rem 0.5rem;
 	border: none;
 	border-radius:5px;
-	transition:background 0.5s;
-	transition:color 0.5s;
-	transition:box-shadow 0.5s;
+	transition:all 0.5s;
 	}
 	
 	.clicklink:hover{
-	padding: 10px 10px;
+	padding:0.3rem 0.5rem;
 	color:#FFFFFF;
 	background:#2BA31B;
 	box-shadow: 1px 1px 3px 0 rgba(0,0,0,0.5) ;
 	}
 	
+	a.resultlink{
+	color:#4D4D4D;
+	border-radius:5px;
+	transition:color 0.2s;
+	}
+	
+	td.resultoutline{
+	border-color: #7d7d80;
+	border-width: 1px;
+	border-style: solid;
+	}
+	
+	/*覆蓋預設按鈕效果*/
+	.btn:focus, .btn:hover, .btn:active {
+	text-decoration: none;
+	background: #2ba31b;
+	border-radius:0px;
+	color: white;
+	}
+	
 	.rapidrequest{
-	padding:5px 10px;
+	color:#000000;
+	padding:0.3rem 0.5rem;
 	border: none;
 	border-radius:5px;
 	background:#99C4FF;
-	transition:font-size 0.5s;
+	transition:background 0.3s;
 	}
 	
 	.rapidrequest:hover{
 	background:#CCE2FF;
-	font-size:150%;
 	}
 	
 	.hpvdb{
-	color:#2BA31B;
 	text-align:left;
-	margin-left:20px;
-	margin-top:20px;
+	margin-left:1rem;
+	/*margin-top:1rem;*/
+	transition:color 0.5s;
+	}
+	
+	.hpvdb:hover{
+	color:#000000
 	}
 	
 	ul{
@@ -67,15 +103,15 @@
 	margin: 10px;
 	}
 	
-	.floatsection{
+	.floatnav{
 	top:0px;
 	left:0px;
 	right:0px;
 	position:fixed;
-	height:30%;
+	/*height:30%;*/
 	width:100%;
 	background:#FDFCFC;
-	opacity:1.0;
+	/*opacity:1.0;*/
 	z-index:3;
 	}
 	
@@ -85,22 +121,21 @@
 	font-size:16px;
 	text-align: center;
 	/*text-shadow: 0.5px 0.5px 1px #000000;*/
-	color: #FFFFFF;
 	margin:0px auto;
 	/*margin-bottom:5px;*/
 	}
 	
 	.rightsdeclarearea{
 	padding: 5px 10px 10px 0px;
-	width:auto;
+	width:100%;
 	height:auto;
-	left:100%;
-	right:100%;
-	/*bottom: 0px;
-	position:fixed; */ /*浮動置底*/
+	/*left:100%;
+	right:100%;*/
+	bottom: 0px;
+	position:fixed;
 	border: none;
 	border-radius: 5px;
-	background: #2BA31B;
+	background: #fdfcfc;
 	}
 	
 	.updatetime{
@@ -110,9 +145,9 @@
 	}
 	
 	.titleversion{
-	font-size:14px;
-	padding: 2px 6px;
-	margin-left:10px;
+	font-size:0.6rem;
+	padding:0.1rem 0.3rem;
+	margin:0.5rem;
 	color:#000000;
 	background:#BABABA;
 	border: none;
@@ -122,13 +157,13 @@
 
 	.input {
 	padding: 10px 10px;
-	font-size:28px;
+	font-size:2rem;
 	color:#000000;
 	text-align:center;
 	background:#FFFFFF;
 	border: 1px solid #b7b7b7;
 	border-style:solid;
-	border-radius:5px;
+	/*border-radius:5px;*/
 	border-width:1px;
 	box-sizing: content-box;
 	box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
@@ -137,7 +172,6 @@
 		
 	.input[type="submit"] {
 	padding: 10px 30px;
-	font-size:28px;
 	color: #ffffff;
 	text-shadow: 1px 1px 2px #000000;
 	text-decoration: none;
