@@ -86,6 +86,7 @@
 				<div>
 					<a class="btn themeTextColor" href="/myst-data.php" role="button">謎之物</a>
 				</div>
+				
 			</div>
 		</div>
 	</div>
