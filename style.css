@@ -1,4 +1,5 @@
 /* CSS Table */
+/*#F5EDD9 #EAEBEB #FDFCFC*/
 
 	body,ul,li,.main,.floatsection,.rightsdeclare,.rightsdeclarearea,.titleversion,.input{
 	font-family: "Noto Sans";
@@ -25,10 +26,31 @@
 
 	.main{
 	font-weight: 400;
-	font-size: 1.1rem;
-	line-height: 2rem;
+	/*font-size: 1rem;*/
+	line-height: 1.5rem;
 	text-align: center;
 	}
+	
+	.area{
+	min-height: 400px;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+	}
+	
+	.area:after {
+	display: block;
+	content: " invisible node ";
+	flex:999 999 auto;
+	}
+	
+	#searchArea {
+    margin: 1rem;
+    }
 	
 	.resultHeader
 	{
@@ -51,6 +73,7 @@
 	
 	a.resultlink{
 	color:#4D4D4D;
+	padding: 0rem 0.5rem;
 	border-radius:5px;
 	transition:color 0.2s;
 	}
@@ -61,13 +84,24 @@
 	border-style: solid;
 	}
 	
-	/*覆蓋預設按鈕效果*/
+	/*覆蓋Bootstrap預設按鈕效果*/
 	.btn:focus, .btn:hover, .btn:active {
 	text-decoration: none;
 	background: #2ba31b;
 	border-radius:0px;
 	color: white;
 	}
+	
+	/*覆蓋p物件中Bootstrap預設dropdown物件寬度*/
+	p.dropdown-item {
+    width: 40rem;
+    white-space: pre-line;
+    }
+    
+    /*禁用.table下td的padding*/
+    .table td {
+    padding: 0;
+    }
 	
 	.rapidrequest{
 	color:#000000;
@@ -83,9 +117,8 @@
 	}
 	
 	.hpvdb{
-	text-align:left;
 	margin-left:1rem;
-	/*margin-top:1rem;*/
+	margin-top:1rem;
 	transition:color 0.5s;
 	}
 	
@@ -102,22 +135,25 @@
 	margin: 10px;
 	}
 	
-	.floatnav{
-	top:0px;
-	left:0px;
-	right:0px;
+	#floatnav{
+	padding: 0rem;
+	top:0rem;
+	left:0rem;
+	right:0rem;
 	position:fixed;
-	/*height:30%;*/
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+	align-items: center;
 	width:100%;
 	background:#FDFCFC;
-	/*opacity:1.0;*/
 	z-index:3;
 	}
 	
 	.rightsdeclare {
 	/*padding: 10px 5px;*/
 	font-weight: 400;
-	font-size:16px;
+	font-size:0.8rem;
 	text-align: center;
 	/*text-shadow: 0.5px 0.5px 1px #000000;*/
 	margin:0px auto;
@@ -125,7 +161,7 @@
 	}
 	
 	.rightsdeclarearea{
-	padding: 5px 10px 10px 0px;
+	padding:0.5rem 0rem;
 	width:100%;
 	height:auto;
 	/*left:100%;
