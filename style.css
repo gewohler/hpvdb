@@ -1,12 +1,19 @@
 /* CSS Table */
 /*#F5EDD9 #EAEBEB #FDFCFC*/
 
+/*RWD*/
+@media (max-width: 1080px) {
+	html {
+	font-size:10px;
+	}
+}
+
 	body,ul,li,.main,.floatsection,.rightsdeclare,.rightsdeclarearea,.titleversion,.input{
 	font-family: "Noto Sans";
 	color:#000000;
 	}
 	
-	/*取消連結底線*/
+	/*Bootstrap:取消連結底線*/
 	a,a:hover,a:active{
 	text-decoration:none;
 	}
@@ -20,47 +27,71 @@
 	}
 
 	/*文字主色，標題、版權宣告、按鈕及搜尋結果區連結*/
-	.themeTextColor,.clicklink,a.resultlink:hover {
+	.themeTextColor,.clicklink,.divtable a:hover {
 	color: #2ba31b;
 	}
 
 	.main{
 	font-weight: 400;
 	/*font-size: 1rem;*/
-	line-height: 1.5rem;
+	/*line-height: 1.5rem;*/
 	text-align: center;
 	}
 	
 	.area{
-	min-height: 400px;
 	display: flex;
-	display: -webkit-flex;
 	flex-wrap: nowrap;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	align-content: center;
+	/*align-content: center;*/
 	}
 	
-	.area:after {
+	.area::before,.area::after {
 	display: block;
 	content: " invisible node ";
 	flex:999 999 auto;
+	color: rgba(128, 128, 128, 0);
 	}
 	
 	#searchArea {
-    margin: 1rem;
+    margin: 2rem;
     }
 	
-	.resultHeader
-	{
-	color:#000000;
+	#floatnav{
+    /*max-height: 10vh;*/
+	padding: 0.5rem;
+	top:0rem;
+	left:0rem;
+	right:0rem;
+	position:fixed;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+	align-items: center;
+	width:100%;
+	background:#FDFCFC;
+	z-index:3;
 	}
+	
+	#about-area{
+	font-size: 0.9rem;
+	height: auto;
+	max-height: 90vh;
+	overflow-x: hidden;
+	}
+	
+	#about-unit {
+	width:40rem;
+	max-width: 90vw;
+	/*min-width: 10vw; */
+	white-space: pre-line;
+    }
 	
 	.clicklink{
 	padding:0.3rem 0.5rem;
 	border: none;
-	border-radius:5px;
+	border-radius:0.25rem;
 	transition:all 0.5s;
 	}
 	
@@ -71,54 +102,153 @@
 	box-shadow: 1px 1px 3px 0 rgba(0,0,0,0.5) ;
 	}
 	
-	a.resultlink{
+	.divtable a{
 	color:#4D4D4D;
 	padding: 0rem 0.5rem;
-	border-radius:5px;
+	border-radius:0.25rem;
 	transition:color 0.2s;
 	}
 	
-	td.resultoutline{
-	border-color: #7d7d80;
-	border-width: 1px;
-	border-style: solid;
-	}
-	
-	/*覆蓋Bootstrap預設按鈕效果*/
+	/*Bootstrap:覆蓋預設按鈕效果*/
 	.btn:focus, .btn:hover, .btn:active {
 	text-decoration: none;
 	background: #2ba31b;
-	border-radius:0px;
+	border-radius:0rem;
 	color: white;
 	}
-	
-	/*覆蓋p物件中Bootstrap預設dropdown物件寬度*/
-	p.dropdown-item {
-    width: 40rem;
-    white-space: pre-line;
-    }
     
-    /*禁用.table下td的padding*/
-    .table td {
-    padding: 0;
+    .qsl-panel
+    {
+	display: flex;
+	width: 70vw;
+	margin:1.5rem;
+	flex-wrap: wrap-reverse;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-end;
+	/*align-content: center;*/
     }
 	
-	.rapidrequest{
-	color:#000000;
+	.qsl-panel a{
+	color: #000000;
 	padding:0.3rem 0.5rem;
-	border: none;
-	border-radius:5px;
-	background:#99C4FF;
-	transition:background 0.3s;
+	text-align: left;
+	border-radius: inherit;
+	transition: all 0.3s;
 	}
 	
-	.rapidrequest:hover{
-	background:#CCE2FF;
+	.qsl-panel a:hover {
+	color: #FFFFFF;
+	font-weight: 700;
+	text-shadow: 0.8px 0.8px 1px #000000;
+	}
+	
+	.qsl-menu {
+	/* height: auto; */
+	/* max-height: 60vh; */
+	/* overflow-x: hidden; */
+	margin:1rem;
+	border-radius: 0.25rem;
+	}
+	
+	.qsl-label{
+	width: inherit;
+	background:#D0D0D0;
+	}
+	
+	.qsl-title:hover{
+	text-shadow:none;
+	box-shadow:none;
+	}
+	
+	#qsl-empty {
+	}
+	
+	#qsl-empty:hover {
+	text-shadow: none;
+	box-shadow: none;
+	font-weight: 400;
+}
+	
+	.qsl-green{
+	width:inherit;
+	background:#83CC83;
+	/*padding:0.3rem 0.5rem;*/
+	/*margin: 2rem;*/
+	border: none;
+	border-radius:inherit;
+	}
+	
+	.qsl-green a{
+    }
+	
+	.qsl-green a:hover{
+	background:#2ba31b;
+	box-shadow: inset 1px 1px 2px 1px rgba(0,0,0,0.3);
+	}
+	
+	.qsl-red{
+	width:inherit;
+	background:#F56262;
+	border: none;
+	border-radius:inherit;
+	}
+	
+	.qsl-red a{
+    }
+	
+	.qsl-red a:hover{
+	background:#E51717;
+	box-shadow: inset 1px 1px 2px 1px rgba(0,0,0,0.3);
+	}
+	
+	.qsl-yel{
+	width:inherit;
+	background:#FFF17B;
+	border: none;
+	border-radius:inherit;
+	}
+	
+	.qsl-yel a:hover{
+	color: #000000;
+	background:#FFE92B;
+	text-shadow: none;
+	box-shadow: inset 1px 1px 2px 1px #FFFFFF;
+	}
+	
+	.qsl-wg{
+	width:inherit;
+	background:#FFFFFF;
+	border: none;
+	border-radius:inherit;
+	}
+	
+	.qsl-wg a{
+    }
+	
+	.qsl-wg a:hover{
+	
+	background:#FFFFFF;
+	color: #2ba31b;
+	/*box-shadow: inset 1px 1px 2px 1px rgba(0,0,0,0.3);*/
+	}
+	
+	.qsl-bl{
+	width:inherit;
+	background:#C9CDFF;
+	border: none;
+	border-radius:inherit;
+	}
+	
+	.qsl-bl a{
+    }
+	
+	.qsl-bl a:hover{
+	background:#616BFF;
+	box-shadow: inset 1px 1px 2px 1px rgba(0,0,0,0.3);
 	}
 	
 	.hpvdb{
-	margin-left:1rem;
-	margin-top:1rem;
 	transition:color 0.5s;
 	}
 	
@@ -133,21 +263,6 @@
 	li{
 	display:inline;
 	margin: 10px;
-	}
-	
-	#floatnav{
-	padding: 0rem;
-	top:0rem;
-	left:0rem;
-	right:0rem;
-	position:fixed;
-	display:flex;
-	flex-wrap:wrap;
-	justify-content: space-between;
-	align-items: center;
-	width:100%;
-	background:#FDFCFC;
-	z-index:3;
 	}
 	
 	.rightsdeclare {
@@ -186,35 +301,72 @@
 	color:#000000;
 	background:#BABABA;
 	border: none;
-	border-radius:5px;
+	border-radius:0.25rem;
 	box-shadow: 1px 1px 3px 0 rgba(0,0,0,0.5)
 	}
 
 	.input {
-	padding: 10px 10px;
+	padding: 0.3rem 1rem;
 	font-size:2rem;
 	color:#000000;
 	text-align:center;
 	background:#FFFFFF;
 	border: 1px solid #b7b7b7;
 	border-style:solid;
-	/*border-radius:5px;*/
+	/*border-radius:0.25rem;*/
 	border-width:1px;
 	box-sizing: content-box;
 	box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
 	text-shadow:1px 1px 2px rgba(0,0,0,0.3);
+	transition: all 0.2s;
 	} 
 		
 	.input[type="submit"] {
-	padding: 10px 30px;
 	color: #ffffff;
 	text-shadow: 1px 1px 2px #000000;
 	text-decoration: none;
 	text-align: center;
 	background: #2BA31B;
-	border-radius: 5px;
+	border-radius:0.25rem;
 	border: none;
 	box-sizing: content-box;
 	box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.3) ;
 	}
+	
+	.input[type="submit"]:hover{
+	box-shadow: inset 1px 1px 2px 1px rgba(0,0,0,0.3);
+	}
 
+	/*DIV化table，勿動*/
+	.divtable{    
+	display: table; 
+	width:100%;
+	background-color: transparent;
+	border-collapse:collapse;
+	border-spacing: 0.3rem;
+	white-space: nowrap;
+	/*display: block;*/
+	overflow-x: auto;
+	} 
+	
+	.divtable .thead{    
+	display:table-header-group; 
+	vertical-align: middle;
+	} 
+	
+	.divtable .tbody{    
+	display:table-row-group; 
+	vertical-align: middle;
+	} 
+	
+	.divtable .tr{    
+	display:table-row; 
+	border-style: solid none;
+	border-width: 1px;
+	border-color: #dfdfdf;
+	} 
+	
+	.divtable .th, .divtable .td{    
+	display:table-cell; 
+	padding: 0;
+	} 

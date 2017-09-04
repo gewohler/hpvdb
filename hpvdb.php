@@ -4,9 +4,10 @@
 <html>
 <head>
 	
-	<title>MVISleaks</title>
+	<title>MVISleaks — 比監理網更強大</title>
 	<meta charset="utf-8">
 	<meta name= "viewport" content= "width=device-width, initial-scale=1" >
+	<meta name="author" content="Gewohler">
 	
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
@@ -22,48 +23,44 @@
 
 <body>
 	<div class="container-fluid" id="floatnav">
-		<div style="display:flex; flex-direction:row;justify-content:start; align-items:flex-end">
-			<a class="h2 hpvdb themeTextColor" href="hpvdb.php">MVISleaks<span class="titleversion">v0.3.4</span></a>
+		<div style="display:inherit; flex-direction:row;justify-content:start; align-items:center">
+			<a class="h3 hpvdb themeTextColor" href="hpvdb.php">MVISleaks<span class="titleversion">v0.3.5.5</span></a>
 			<span>自己的查牌機自己做 監理網sucks洗洗睡</span>
 		</div>
 		
-		<div style="display:flex; flex-direction:row;justify-content:end">
+		<div style="display:inherit;align-items: center;flex-shrink: 1;">
 				
 				<div class="dropdown">
 					<a class="btn themeTextColor dropdown" href="#" role="button" id="tips" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TIPS</a>
-					<div class="dropdown-menu" aria-labelledby="tips">
+					<div class="dropdown-menu" id="about-area" aria-labelledby="tips">
 						
-						<p class="dropdown-item">
-							可以在網址後直接key"?searchfor=關鍵字"，效果是一樣的。
-							關鍵字間留一格空白可以做交集搜尋。範例
+						<p class="dropdown-item" id="about-unit">
 						</p>
 						<ul>
-							<li><a class="clicklink" href="?searchfor=311-WF">?searchfor=311-WF</a></li>
-							<li><a class="clicklink" href="?searchfor=北客+ERK+2005">北客 ERK 2005</a></li>
-							<li><a class="clicklink" href="?searchfor=北客+ERK+2005">?searchfor=北客+ERK+2005</a></li>
+							<li><a class="clicklink" href="?searchfor=#">?searchfor=#</a></li>
+							<li><a class="clicklink" href="?searchfor=#">#</a></li>
+							<li><a class="clicklink" href="?searchfor=#">?searchfor=#</a></li>
 						</ul>
     
 					</div>
 				</div>
 				
 				<div class="dropdown">
-					<a class="btn themeTextColor dropdown" href="#" role="button" id="about" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >ABOUT</a>
-					<div class="dropdown-menu" aria-labelledby="about">
+					<a class="btn themeTextColor dropdown" href="#" role="button" id="about" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >ABOUT</a>
+					<div class="dropdown-menu" id="about-area" aria-labelledby="about">
 						
-						<p class="dropdown-item">
-							嫌監理機關提供的車號資訊對一個公車迷來說太少，於是自己用office做了一些整理。一年過後又覺得監理網功能太殘廢，乾脆把手邊這筆資料弄成互動式的東西這樣。
-							資料內容是大客車的型式諸元，基本上只收錄不會變動的東西（例如底盤型式、底盤出廠年份等等），會變動的（如座椅配置、有無中後門）不在此列。
+						<p class="dropdown-item" id="about-unit">
+							<a class="h5">楔子</a>
 						</p>
-						<p class="dropdown-item">
-							資料以兩大官方來源為主，監理服務網及公路監理加值服務網。監理網沒有的東西基本上來自民間…對…從各種網站、FB社團看來的OTZ
-							所以想斗內、投稿資料、勘誤或工商服務的話 請洽<a class="clicklink" href="https://script.google.com/macros/s/AKfycbw8Hn6GLNJ-HLiqd5VgLyLpDlzS6TjH5l1PiyrKezYdDsdlC93_/exec">統一窗口</a>。
+						<p class="dropdown-item" id="about-unit">
+							<a class="h5">資料</a>
+							斗內、投稿資料、勘誤或工商服務 請洽<a class="clicklink" href="https://script.google.com/macros/s/AKfycbw8Hn6GLNJ-HLiqd5VgLyLpDlzS6TjH5l1PiyrKezYdDsdlC93_/exec">統一窗口</a>。
 						</p>
-						<p class="dropdown-item">
-							P.S.
-							來稿不要給我維基百科的東西。寫那些巴士向條目的都是些毫無自主品管意識的拉基愛好者，各種fancruft、瑣碎敘述會讓我懷疑這些人的智商。
-							以苗栗客運底下車輛表BYD、金旅兩個單元為例，列出苗客自有的車號還算合理，但這兩個單元自2015年底到現在一直在不斷增加中，修訂歷史顯示這些修改都來自同一個User，內容洋洋灑灑一路寫到採購同款車的業者和車號，連BYD跑蘇花公路300公里免充電好棒棒這種業配佚聞都出來了不知道寫這種東西到底是在衝殺小
-								
-							所以不要給我維基百科那種拉基。
+						<p class="dropdown-item" id="about-unit">
+							<a class="h5">未來計劃</a>
+						</p>
+						<p class="dropdown-item" id="about-unit">
+							P.S
 						</p>
 						
 					</div>
@@ -71,34 +68,44 @@
 				
 				<div class="dropdown">
 					<a class="btn themeTextColor dropdown" href="#" role="button" id="myst-data" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">謎之物</a>
-					<div class="dropdown-menu" style="min-width:60rem" aria-labelledby="myst-data">
-							<iframe src="myst-data.php" class="dropdown-item"></iframe>
+					<div class="dropdown-menu" id="about-area" aria-labelledby="myst-data">
+						<iframe src="myst-data.php" class="dropdown-item" id="about-unit"></iframe>
 					</div>
 				</div>
 				
-			</div>
 		</div>
 	</div>
 		
 <div style="left:0%;right:0%;position:absolute;" class="container-fluid main area">
 		
-		<div style="display:flex; flex-direction:row;justify-content:space-between;opacity:0.0;">
-			<h2 class="hpvdb">　</h2>
-			<div style="display:flex; flex-direction:row;justify-content:end">
-				<a class="btn " href="#" role="button" id="garbage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">garbage</a>
+	<div id="floatnav" style="opacity:0.0;z-index: -100;">
+		<div style="display:inherit; flex-direction:row;justify-content:start; align-items:center">
+			<a class="h3 hpvdb">　</a>
+			<span>　</span>
+		</div>
+		<div style="display:inherit;align-items: center;flex-shrink: 1;">
+			<div class="dropdown">
+				<a class="btn themeTextColor dropdown" href="#" role="button" id="tips" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TIPS</a>
 			</div>
+			<div class="dropdown">
+				<a class="btn themeTextColor dropdown" href="#" role="button" id="tips" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TIPS</a>
+			</div>
+			<div class="dropdown">
+				<a class="btn themeTextColor dropdown" href="#" role="button" id="tips" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TIPS</a>
+			</div>
+		</div>
+	</div>
+		
+	<div id="searchArea">
+		<div>
+			<h4 class="updatetime">更新時間：20170904-17:14</span>
 		</div>
 		
-		<div id="searchArea">
-			<div>
-				<h4 class="updatetime">更新時間：20170828-11:39</h4>
-			</div>
-			
-			<form method="GET">
-				<input class="input" multiple="multiple" type="textbox" id="searchfor" name="searchfor" placeholder="車牌號碼，型號或廠牌">
-				<input class="input" type="submit" value="找車">
-			</form>
-		</div>
+		<form method="GET">
+			<input class="input" multiple="multiple" type="textbox" id="searchfor" name="searchfor" placeholder="車牌號碼，型號或廠牌">
+			<input class="input" type="submit" value="找車">
+		</form>
+	</div>
 	
 	
 <?php
@@ -123,51 +130,46 @@ if (isset($_GET['searchfor']) & $_GET['searchfor'] != ''){
         if ($csv[0][0] == NULL){
                 echo '<div class="alert alert-warning" style="max-width: 40%;margin-left: 30%;margin-right: 30%;" role="alert">沒東西</div>';
         }else{
-                echo '<h4 style="text-align: center;">' . '找到車號：' . count($csv). '個' . '</h4>';
-                echo '<br>';
-                echo '<div class="table-responsive"><table class="table" width="100%">';
-                echo '<thead>';
+                echo '<div class="alert alert-info" style="max-width: 40%;margin-left: 30%;margin-right: 30%;" role="alert" style="font-size:1.5rem;">' . '找到車號：' . count($csv). '個' . '</div>';
+
+                echo '<div class="container-fluid divtable">';
+                echo '<div class="thead">';
 
                 $headers = ['車號','車主', '廠牌', '型式（通稱）', '型式（行照）', '引擎', '車體', '出廠年月', '發照日', '繳銷日', '發照單位', '車號歷史(前)', '車號歷史(後)', '備考'];
-                echo '<td><a data-toggle="tooltip" data-placement="bottom" title="就是車號..">車號</button></td>';
-                echo '<td><a data-toggle="tooltip" data-placement="bottom" title="XX客運">車主</button></td>';
-                echo '<td><a data-toggle="tooltip" data-placement="bottom" title="國外車系（e.g.歐美日中..etc）以其母廠英文名為主，台系車依其中文廠名">廠牌</button></td>';
-                echo '<td><a data-toggle="tooltip" data-placement="bottom" title="e.g.RK8J、K380等等">型式（通稱）</button></td>';
-                echo '<td><a data-toggle="tooltip" data-placement="bottom" title="行照上登記的型式">型式（行照）</button></td>';
-                echo '<td><a data-toggle="tooltip" data-placement="bottom" title="就是引擎..">引擎</button></td>';
-                echo '<td><a data-toggle="tooltip" data-placement="bottom" title="車體打造/組裝廠，CKD進口車以組裝者為主">車體</button></td>';
-                echo '<td><a data-toggle="tooltip" data-placement="bottom" title="監理網來的">出廠年月</button></td>';
-                echo '<td><a data-toggle="tooltip" data-placement="bottom" title="監理網來的">發照日</button></td>';
-                echo '<td><a data-toggle="tooltip" data-placement="bottom" title="監理網來的">繳銷日</button></td>';
-                echo '<td><a data-toggle="tooltip" data-placement="bottom" title="XX監理站orXX監理所">發照單位</button></td>';
-                echo '<td><a data-toggle="tooltip" data-placement="bottom" title="前車號">車號歷史(前)</button></td>';
-                echo '<td><a data-toggle="tooltip" data-placement="bottom" title="現在車號">車號歷史(後)</button></td>';
-                echo '<td><a data-toggle="tooltip" data-placement="bottom" title="　">備考</button></td>';
-                /*
-                foreach ($headers as $td){
-                        echo '<td>' . $td . '</td>';
-                }
-				*/
+                echo '<div class="tr">';
+                echo '<div class="th"><a data-toggle="tooltip" data-html="true" data-placement="auto" title="..">車號</button></div>';
+                echo '<div class="th"><a data-toggle="tooltip" data-html="true" data-placement="auto" title="..">車主</button></div>';
+                echo '<div class="th"><a data-toggle="tooltip" data-html="true" data-placement="auto" title="..">廠牌</button></div>';
+                echo '<div class="th"><a data-toggle="tooltip" data-html="true" data-placement="auto" title="..">型式（通稱）</button></div>';
+                echo '<div class="th"><a data-toggle="tooltip" data-html="true" data-placement="auto" title="..">型式（行照）</button></div>';
+                echo '<div class="th"><a data-toggle="tooltip" data-html="true" data-placement="auto" title="..">引擎</button></div>';
+                echo '<div class="th"><a data-toggle="tooltip" data-html="true" data-placement="auto" title="..">車體</button></div>';
+                echo '<div class="th"><a data-toggle="tooltip" data-html="true" data-placement="auto" title="..">出廠年月</button></div>';
+                echo '<div class="th"><a data-toggle="tooltip" data-html="true" data-placement="auto" title="..">發照日</button></div>';
+                echo '<div class="th"><a data-toggle="tooltip" data-html="true" data-placement="auto" title="..">繳銷日</button></div>';
+                echo '<div class="th"><a data-toggle="tooltip" data-html="true" data-placement="auto" title="..">發照單位</button></div>';
+                echo '<div class="th"><a data-toggle="tooltip" data-html="true" data-placement="auto" title="..">車號歷史(前)</button></div>';
+                echo '<div class="th"><a data-toggle="tooltip" data-html="true" data-placement="auto" title="..">車號歷史(後)</button></div>';
+                echo '<div class="th"><a data-toggle="tooltip" data-html="true" data-placement="auto" title="..">備考</button></div>';
+				echo '</div>';
 
-                echo '</thead>';
-                echo '<tbody>';
+                echo '</div>';
+                echo '<div class="tbody">';
 
                 $headernum = count($headers);
                 foreach ($csv as $row){
-                        echo '<tr>';
+                        echo '<div class="tr">';
                         $count = 0;
                         foreach ($row as $td){
                                 $count += 1;
                                 if ($count <= $headernum)
-                                echo '<td><a class="resultlink" href="?searchfor=' . $td .'">' . $td . '</a></td>';
-                                //啟用逐格邊框
-                                //echo '<td class="resultoutline"><a class="resultlink" href="?searchfor=' . $td .'">' . $td . '</a></td>';
+                                echo '<div class="td"><a href="?searchfor=' . $td .'">' . $td . '</a></div>';
                         }
-                        echo '</tr>';
+                        echo '</div>';
                 }
 
-                echo '</tbody>';
-                echo '</table></div>';
+                echo '</div>';
+                echo '</div>';
         }
 }else{
 ?>
@@ -178,22 +180,179 @@ if (isset($_GET['searchfor']) & $_GET['searchfor'] != ''){
 }
 ?>
 
-	<div>
-		<div style="margin-top:30px;margin-bottom:20px">
+	<div class="container qsl-panel">
+		
+		<div class="btn-group-vertical qsl-menu" style="width:12rem;">
+			<a href="#" class="qsl-label">監理所站、業者</a>
 			
-			<div class="container row">
-				<div class="btn-group-vertical col">
-					<a class="rapidrequest" href="?searchfor= 三重客運">三重客運</a>
-					<a class="rapidrequest" href="?searchfor= ZHONGTONG">中通(ZHONGTONG)</a>
+			<a class="qsl-green" data-toggle="collapse" href="#臺北市、區" aria-expanded="false">臺北市、區</a>
+			<div class="qsl-green collapse" id="臺北市、區">
+				<div class="card qsl-green"> 
+					
+					<a class="qsl-title">臺北市區監理所</a>
+						<a href="?searchfor= 中興大業巴士">中興巴士</a>
+						
+				</div>	
+			</div>
+					
+			<a class="qsl-green" data-toggle="collapse" href="#新竹區" aria-expanded="false">新竹區</a>
+			<div class="qsl-green collapse" id="新竹區">
+				<div class="card qsl-green"> 
+					
+					<a class="qsl-title">新竹區監理所</a>
+						<a href="?searchfor= 金牌客運">金牌客運</a>
+						
+				</div>	
+			</div>
+					
+			<a class="qsl-green" data-toggle="collapse" href="#臺中區" aria-expanded="false">臺中區</a>
+			<div class="qsl-green collapse" id="臺中區">
+				<div class="card qsl-green"> 
+					
+					<a class="qsl-title">臺中區監理所</a>
+						<a href="?searchfor= 中台灣客運">中台灣客運</a>
+					
+				</div>	
+			</div>
+					
+			<a class="qsl-green" data-toggle="collapse" href="#嘉義區" aria-expanded="false">嘉義區</a>
+			<div class="qsl-green collapse" id="嘉義區">
+				<div class="card qsl-green"> 
+					
+					<a class="qsl-title">雲林監理站</a>
+						<a href="?searchfor= 臺西客運">臺西客運</a>
+			
+				</div>	
+			</div>
+			
+			<a class="qsl-green" data-toggle="collapse" href="#高雄市、區" aria-expanded="false">高雄市、區</a>
+			<div class="qsl-green collapse" id="高雄市、區">
+				<div class="card qsl-green"> 
+					
+					<a class="qsl-title">高雄市區監理所</a>
+						<a href="?searchfor= 高雄市公共車船管理處">高雄市公車處</a>
+						
+				</div>	
+			</div>
+			
+		</div>
+		
+		<div class="btn-group-vertical qsl-menu" style="width: 8rem;">
+			<a href="#" class="qsl-label">牌號</a>
+			
+			<a class="qsl-green" data-toggle="collapse" href="#新制" aria-expanded="false">新制+倒UV系</a>
+			<div class="qsl-green collapse" id="新制">
+				<div class="card qsl-green"> 
+			
+					<a href="?searchfor= KKA-0">KKA-0</a>
+					
 				</div>
 			</div>
-			
-			<div class="btn-group">
-				<a class="button rapidrequest" href="?searchfor=高雄市公共車船管理處+轉籍">高雄市公車處轉籍車</a>
-				<a class="button rapidrequest" href="?searchfor=HS8J">國瑞低床</a>
+					
+			<a class="qsl-green" data-toggle="collapse" href="#舊制倒F、倒A" aria-expanded="false">舊制倒F、倒A</a>
+			<div class="qsl-green collapse" id="舊制倒F、倒A">
+				<div class="card qsl-green"> 
+							
+					<a href="?searchfor= -AB">-AB</a>
+					
+				</div>
+			</div>
+					
+			<a class="qsl-green" data-toggle="collapse" href="#舊制正F、正A" aria-expanded="false">舊制正F、正A</a>
+			<div class="qsl-green collapse" id="舊制正F、正A">
+				<div class="card qsl-green"> 
+							
+					<a href="?searchfor= AG-">AG-</a>
+					
+				</div>
+			</div>
+					
+			<a class="qsl-red" data-toggle="collapse" href="#紅牌" aria-expanded="false">紅牌</a>
+			<div class="qsl-green collapse" id="紅牌">
+				<div class="card qsl-red"> 
+							
+					<a href="?searchfor= -AA">-AA</a>
+					
+				</div>
+			</div>
+					
+			<a class="qsl-yel" data-toggle="collapse" href="#黃牌" aria-expanded="false">黃牌</a>
+			<div class="qsl-yel collapse" id="黃牌">
+				<div class="card qsl-yel"> 
+							
+					<a href="?searchfor= -PP">-PP</a>
+					
+				</div>
+			</div>
+					
+			<a class="qsl-wg" data-toggle="collapse" href="#自用牌" aria-expanded="false">自用牌</a>
+			<div class="qsl-wg collapse" id="自用牌">
+				<div class="card qsl-wg"> 
+							
+					<a href="?searchfor=KJA-">KJA-</a>
+					
+				</div>
+			</div>
+					
+		</div>
+				
+		<div class="btn-group-vertical qsl-menu" style="width:8rem;">
+				
+			<a class="qsl-label" data-toggle="collapse" href="#bodymanu-a" aria-expanded="false">車體/現存</a>
+			<div class="qsl-green collapse" id="bodymanu-a">
+				<div class="card qsl-green"> 
+					
+					<a href="?searchfor= 原裝">原裝車</a>
+					
+				</div>
+			</div>
+					
+			<a class="qsl-green" data-toggle="collapse" href="#bodymanu-o" aria-expanded="false">其他</a>
+			<div class="qsl-green collapse" id="bodymanu-o">
+				<div class="card qsl-green"> 
+							
+					<a href="?searchfor= 一加一">一加一</a>
+					
+				</div>
 			</div>
 		</div>
-
+		
+		<div class="btn-group-vertical qsl-menu" style="width:12rem;">
+			<a class="qsl-label" data-toggle="collapse" href="#brands-C" aria-expanded="false">廠牌</a>
+			
+			<div class="qsl-green collapse show" id="brands-C">
+				<div class="card qsl-green"> 
+						
+					<a href="?searchfor= DAEWOO">DAEWOO</a>
+					
+				</div>
+			</div>
+					
+			<a class="qsl-green" data-toggle="collapse" href="#brands-O" aria-expanded="false">more..</a>
+			<div class="qsl-green collapse" id="brands-O">
+				<div class="card qsl-green"> 
+							
+					<a href="?searchfor= BENZ">Mercedes-Benz</a>
+					<a class="qsl-empty">Bluebird</a>
+					
+				</div>
+			</div>
+					
+		</div>
+				
+		<div class="btn-group-vertical qsl-menu" style="width:14rem;">
+			<a class="qsl-label" data-toggle="collapse" href="#topic" aria-expanded="false">話題</a>
+					
+			<div class="qsl-bl collapse show" id="topic">
+				<div class="card qsl-bl"> 
+						
+					<a href="?searchfor= 跳號">跳號</a>
+					
+				</div>
+			</div>
+				
+		</div>
+			
 	</div>
 </div>
 
